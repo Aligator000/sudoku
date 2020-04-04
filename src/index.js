@@ -7,7 +7,7 @@ module.exports = function solveSudoku(matrix) {
         zeros = 0;
         for(let row = 0; row < matrix.length; row++){
             for(let column = 0; column < matrix.length; column++){
-                console.log(matrix[row][column]);
+                //console.log(matrix[row][column]);
                 if(matrix[row][column] === 0){
                     notOurDigit = {};
                 for(let i = 0; i < 9; i++) {
@@ -21,7 +21,7 @@ module.exports = function solveSudoku(matrix) {
                 let alreadyIn = Object.keys(notOurDigit);
                 if (alreadyIn.length === 8){
                     for (let i = 1; i < 10; i ++){
-                        console.log((alreadyIn.indexOf(i.toString()) < 0));
+                        //console.log((alreadyIn.indexOf(i.toString()) < 0));
                         if (alreadyIn.indexOf(i.toString()) < 0){
                                 matrix[row][column] = i;
                        }
@@ -47,4 +47,4 @@ module.exports = function solveSudoku(matrix) {
   [2, 8, 7, 4, 1, 9, 6, 3, 5],
   [3, 4, 5, 2, 8, 6, 1, 7, 9]];
   
-  console.log(solveSudoku(matrix));
+  //console.log(solveSudoku(matrix));
